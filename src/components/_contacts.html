@@ -1,0 +1,36 @@
+<section class="contacts">
+    <div class="contacts__text">
+        <h1>Мы рядом</h1>
+        <p>
+            Заполните форму ниже и мы свяжемся с вами. Не любите формы? Напишите нам на почту&nbsp;&nbsp;<a
+                href="mailto:info@site.com">info@site.com</a>
+        </p>
+    </div>
+    <form class="form contacts__form" action="#" method="POST">
+        <div class="form__content">
+            <label class="field form__field field--w60">
+                <input type="text" name="name" minlength="2" tabindex="1" required="required">
+                <span class="field__placeholder field__placeholder--required">Ваше имя</span>
+            </label>
+            <label class="field form__field field--w40">
+                <input type="email" name="email" tabindex="2" required="required">
+                <span class="field__placeholder field__placeholder--required">Ваш E-Mail</span>
+            </label>
+            <label class="field form__field">
+                <textarea name="comment" minlength="5" rows="3" tabindex="3" required="required"></textarea>
+                <span class="field__placeholder field__placeholder--required">Комментарий</span>
+            </label>
+            <label class="form__privacy-policy">
+                <input type="checkbox" checked="checked" name="privacy-policy" required="required">
+                <span></span>
+                Согласен с <a href="#" target="_blank">Политикой конфиденциальности</a>
+            </label>
+        </div>
+        <div class="form__button-submit">
+            <button type="submit" tabindex="4">
+                <img src="assets/img/message.svg" alt="message">
+                <span data-submited="Ваше сообщение отправлено!">Отправить</span>
+            </button>
+        </div>
+    </form>
+</section>

@@ -1,0 +1,73 @@
+@import "../variables";
+@import '../mixins/container';
+
+.breadcrumb {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 5rem 0 2.5rem;
+
+    .page__contacts & {
+        @include container();
+
+        @media screen and (max-width: 1299px) {
+            max-width: 100%;
+            padding: 4rem 2.625rem 2.5rem;
+        }
+        @media screen and (max-width: 767px) {
+            padding: 5rem 2.625rem 3.875rem;
+        }
+    }
+
+    &__item {
+        position: relative;
+        margin-right: 1.125rem;
+
+        > a {
+            text-decoration: none;
+            transition: color .3s ease;
+            font-size: 1.125rem;
+            font-weight: 300;
+            line-height: 1.16;
+            color: $color2;
+
+            @media screen and (max-width: 1299px) {
+                font-size: 1rem;
+                line-height: 1.125;
+            }
+        }
+
+        &::after {
+            content: '-';
+            position: absolute;
+            right: -0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: 400;
+        }
+
+        &--active {
+
+            > a {
+                cursor: default;
+                pointer-events: none;
+                color: $color2;
+                font-weight: 600;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+
+        &:not(&--active) {
+            &:hover, &:focus {
+                > a {
+                    color: $accent;
+                }
+            }
+        }
+    }
+}

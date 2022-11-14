@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Description">
+    <meta name="keywords" content="Keywords">
+    <link rel="stylesheet" href="assets/css/bundle.min.css">
+    <title>Test toimi</title>
+</head>
+<body>
+<div class="page page__contacts">
+    <header class="header">
+    <div class="logotype header__logotype">
+        <a href="#">LOGO</a>
+    </div>
+    <ul class="navigation header__navigation">
+        <li class="navigation__item">
+            <a href="#">Проекты</a>
+        </li>
+        <li class="navigation__item">
+            <a href="#">О компании</a>
+        </li>
+        <li class="navigation__item navigation__item--active">
+            <a href="#">Контакты</a>
+        </li>
+    </ul>
+    <div class="header__information">
+        <ul class="language header__language">
+            <li class="language__item language__item--active">
+                <a href="#">ru</a>
+            </li>
+            <li class="language__item">
+                <a href="#">en</a>
+            </li>
+        </ul>
+        <button class="header__start-project">
+            <span>
+                Начать проект
+            </span>
+        </button>
+    </div>
+</header>
+    <main class="page__content">
+        <ul class="breadcrumb">
+    <li class="breadcrumb__item">
+        <a href="#">Главная</a>
+    </li>
+    <li class="breadcrumb__item breadcrumb__item--active">
+        <a href="#">Контакты</a>
+    </li>
+</ul>
+        <section class="contacts">
+    <div class="contacts__text">
+        <h1>Мы рядом</h1>
+        <p>
+            Заполните форму ниже и мы свяжемся с вами. Не любите формы? Напишите нам на почту&nbsp;&nbsp;<a
+                href="mailto:info@site.com">info@site.com</a>
+        </p>
+    </div>
+    <form class="form contacts__form" action="#" method="POST">
+        <div class="form__content">
+            <label class="field form__field field--w60">
+                <input type="text" name="name" minlength="2" tabindex="1" required="required">
+                <span class="field__placeholder field__placeholder--required">Ваше имя</span>
+            </label>
+            <label class="field form__field field--w40">
+                <input type="email" name="email" tabindex="2" required="required">
+                <span class="field__placeholder field__placeholder--required">Ваш E-Mail</span>
+            </label>
+            <label class="field form__field">
+                <textarea name="comment" minlength="5" rows="3" tabindex="3" required="required"></textarea>
+                <span class="field__placeholder field__placeholder--required">Комментарий</span>
+            </label>
+            <label class="form__privacy-policy">
+                <input type="checkbox" checked="checked" name="privacy-policy" required="required">
+                <span></span>
+                Согласен с <a href="#" target="_blank">Политикой конфиденциальности</a>
+            </label>
+        </div>
+        <div class="form__button-submit">
+            <button type="submit" tabindex="4">
+                <img src="assets/img/message.svg" alt="message">
+                <span data-submited="Ваше сообщение отправлено!">Отправить</span>
+            </button>
+        </div>
+    </form>
+</section>
+        <div class="menu">
+    <button>
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</div>
+    </main>
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__navigation">
+            <div class="col">
+                <div class="logotype footer__logotype logotype--white">
+                    <a href="#">LOGO</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="footer__title">
+                    <span>Услуги</span>
+                </div>
+                <ul class="footer__links">
+                    <li class="footer__links--item">
+                        <a href="#">Support and development</a>
+                    </li>
+                    <li class="footer__links--item">
+                        <a href="#">UI/UX and product design</a>
+                    </li>
+                    <li class="footer__links--item">
+                        <a href="#">Progressive Web Applications (PWA)</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col">
+                <div class="footer__title">
+                    <span>Компания</span>
+                </div>
+                <ul class="footer__links">
+                    <li class="footer__links--item">
+                        <a href="#">О компании</a>
+                    </li>
+                    <li class="footer__links--item">
+                        <a href="#">Проекты</a>
+                    </li>
+                    <li class="footer__links--item">
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col">
+                <div class="footer__title">
+                    <span>Контакты</span>
+                </div>
+                <ul class="footer__links">
+                    <li class="footer__links--item">
+                        <a href="#" target="_blank" class="footer__download-presentation">
+                            Скачать презентацию
+                        </a>
+                    </li>
+                    <li class="footer__links--item">
+                        <a href="tel:+74999999999" class="footer__phone">
+                            +7 (499) 999-99-99
+                        </a>
+                    </li>
+                    <li class="footer__links--item">
+                        <a href="mailto:info@site.com">
+                            info@site.com
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__information">
+            <span class="footer__copyright">
+                &#169; Company 2022. All rights reserved.
+            </span>
+            <a href="#" class="footer__police">Политика конфиденциальности</a>
+        </div>
+        <div class="social footer__social">
+            <a href="#" class="social__item social__item--telegram">
+                <img src="assets/img/telegram.svg" alt="telegram">
+            </a>
+            <a href="#" class="social__item social__item--whatsapp">
+                <img src="assets/img/whatsapp.svg" alt="whatsapp">
+            </a>
+        </div>
+    </div>
+</footer>
+</div>
+    <script src="assets/js/bundle.min.js"></script>
+</body>
+</html>

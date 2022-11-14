@@ -1,0 +1,102 @@
+@import "../variables";
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.7rem 3.125rem;
+
+    @media screen and (max-width: 1299px) {
+        padding: 2.125rem 2.5rem;
+    }
+
+    @media screen and (max-width: 767px) {
+        padding: 1.8125rem 2.5rem;
+        font-size: 1.875rem;
+        line-height: 1.26;
+    }
+
+    &__logotype {
+        flex: 1;
+        justify-content: flex-start;
+    }
+
+    &__navigation {
+        @media screen and (max-width: 1149px) {
+            display: none;
+        }
+    }
+
+    &__information {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+
+    }
+
+    &__language {
+        margin: 0 2.25rem 0.2rem 0;
+    }
+
+    &__start-project {
+        background: none;
+        border: 0;
+        outline: none;
+        position: relative;
+        padding: 1.25rem 2.375rem 1.25rem 1.5rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 3.8125rem;
+            width: 3.8125rem;
+            border: 1px solid $lightgray;
+            border-radius: 2rem;
+            transition: width .5s ease, color .25s linear .25s;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0.9375rem;
+            top: 50%;
+            width: 0.8125rem;
+            height: 0.75rem;
+            transform: translateY(-50%);
+            background-image: url('../img/arrow.svg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        & > span {
+            text-transform: uppercase;
+            color: $accent;
+            position: relative;
+            z-index: 3;
+            font-weight: 800;
+            font-size: 1rem;
+            line-height: 1.25;
+            letter-spacing: calc(1em / 50);
+        }
+
+        &:hover, &:focus {
+            &::before {
+                width: 100%;
+                border-color: $accent;
+            }
+        }
+    }
+}

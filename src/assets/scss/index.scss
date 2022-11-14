@@ -1,0 +1,81 @@
+@import 'normalize.css';
+@import 'variables';
+@import 'mixins/font-face';
+@import 'mixins/container';
+
+@include font-face('Gilroy', 'Gilroy-Light', 300, 'normal');
+@include font-face('Gilroy', 'Gilroy-Regular', 400, 'normal');
+@include font-face('Gilroy', 'Gilroy-SemiBold', 600, 'normal');
+@include font-face('Gilroy', 'Gilroy-Bold', 700, 'normal');
+@include font-face('Gilroy', 'Gilroy-ExtraBold', 800, 'normal');
+@include font-face('Circe', 'Circe-Regular', 400, 'normal');
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: $font-face;
+    font-weight: 400;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+button:hover,
+a:hover,
+button:focus,
+a:focus {
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: $accent;
+
+    @media screen and (max-width: 1299px) {
+        font-size: 3.75rem;
+        line-height: 2;
+    }
+
+    @media screen and (max-width: 767px) {
+        font-size: 2.5rem;
+        line-height: 1;
+    }
+}
+
+.page {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+.container {
+    @include container();
+
+    @media screen and (max-width: 1299px) {
+        max-width: 100%;
+        padding: 0 2.5rem;
+    }
+}
+
+.col {
+    flex: 1;
+}
+
+@import 'components/logotype';
+@import 'components/form';
+@import 'components/navigation';
+@import 'components/language';
+@import 'components/breadcrumb';
+@import 'components/header';
+@import 'components/contacts';
+@import 'components/menu';
+@import 'components/footer';
+
