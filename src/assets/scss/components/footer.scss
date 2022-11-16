@@ -156,14 +156,18 @@
 
     &__information {
         display: flex;
-        flex-direction: column;
+
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+        }
+
     }
 
     &__copyright {
         font-weight: 600;
         font-size: 0.875rem;
         line-height: 1.21;
-        min-width: calc(25% * 3);
+        min-width: calc(25.7% * 3);
 
         @media screen and (max-width: 1149px) {
             min-width: calc(33% * 2);
